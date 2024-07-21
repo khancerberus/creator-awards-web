@@ -18,3 +18,25 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.options-transition-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.options-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 0.4s, transform 0.2s;
+}
+
+.options-transition-exit {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.options-transition-exit-active {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s, transform 0.2s;
+}
