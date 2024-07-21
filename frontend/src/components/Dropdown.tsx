@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import { useEffect, useRef, useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
 
@@ -6,9 +7,11 @@ interface DropdownProps {
   options: string[]
   multiple?: boolean
   onChange?: (selectedOptions: string[]) => void
+  className?: string
 }
 
-export const Dropdown = ({ value, options, multiple, onChange }: DropdownProps): JSX.Element => {
+export const Dropdown = ({ value, options, multiple, onChange, className, ...props }: DropdownProps): JSX.Element => {
+  const dropdownClassNames = classNames('relative flex bg-green-800', className)
   const optionsRef = useRef<HTMLDivElement>(null)
   const selectRef = useRef<HTMLDivElement>(null)
   const [isOpen, setIsOpen] = useState(false)
@@ -18,7 +21,7 @@ export const Dropdown = ({ value, options, multiple, onChange }: DropdownProps):
     onChange?.(newSelectedOptions)
   }
 
-  const handleOptionClick = (event: React.MouseEvent<HTMLDivElement>) => {
+  const handleOptionClick = (event: React.MouseEvent<HTMLDivElement>): void => {
     const selectedOption = event.currentTarget.textContent
     const isSelected = selectedOptions.includes(selectedOption ?? '')
     if (multiple) {
@@ -47,7 +50,7 @@ export const Dropdown = ({ value, options, multiple, onChange }: DropdownProps):
       }
     })
 
-    return () => {
+    return (): void => {
       document.removeEventListener('mousedown', () => {
         setIsOpen(false)
       })
@@ -61,7 +64,7 @@ export const Dropdown = ({ value, options, multiple, onChange }: DropdownProps):
   }, [value])
 
   return (
-    <div className="relative flex bg-green-800">
+    <div className={dropdownClassNames} {...props}>
       <div
         ref={selectRef}
         onClick={() => {
