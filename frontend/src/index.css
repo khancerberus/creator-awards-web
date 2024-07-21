@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: "Montserrat", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
 
@@ -27,7 +27,9 @@
 .options-transition-enter-active {
   opacity: 1;
   transform: translateY(0px);
-  transition: opacity 0.4s, transform 0.2s;
+  transition:
+    opacity 0.4s,
+    transform 0.2s;
 }
 
 .options-transition-exit {
@@ -38,5 +40,54 @@
 .options-transition-exit-active {
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.4s, transform 0.2s;
+  transition:
+    opacity 0.4s,
+    transform 0.2s;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: -1;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+
+  transition: opacity 250ms ease-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+
+  transition: opacity 250ms ease-out;
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(500px);
+  }
+}
+
+@keyframes slide-to-left {
+  to {
+    transform: translateX(-100vw);
+  }
+}
+
+.slide {
+  view-transition-name: slide;
+}
+
+::view-transition-old(slide) {
+  animation: slide-to-left 1s;
+}
+
+::view-transition-new(slide) {
+  animation: slide-from-right 1s;
+}
+
+.button-move {
+  view-transition-name: button-move;
 }
