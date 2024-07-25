@@ -6,7 +6,7 @@
   "semi": false,
   "tabWidth": 2,
   "useTabs": false,
-  "plugins": ["prettier-plugin-tailwindcss", "@ianvs/prettier-plugin-sort-imports"],
+  "plugins": ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
   "overrides": [
     {
       "files": ["*.js", "*.ts"],
@@ -35,7 +35,7 @@
     "^@/pages$",
     "^@/pages/(.*)$",
     "",
-    "^@/components/(.*)$",
+    "^@/components$",
     "^@/components/(.*)$",
     "",
     "^@/services$",
@@ -46,7 +46,9 @@
     "",
     "^@/(.*)$",
     "",
-    "^(?!.*[.]css$)[./].*$",
+    "^(?!.*[.]css$)([./@]).*$",
+    "^@/.*[.]css$",
+    "^[./].*[.]css$",
     "^.css$"
   ],
   "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
