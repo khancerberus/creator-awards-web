@@ -5,40 +5,40 @@ export default {
         extend: {
             colors: {
                 primary: {
-                    50: 'var(--color-primary-50)',
-                    100: 'var(--color-primary-50)',
-                    200: 'var(--color-primary-50)',
-                    300: 'var(--color-primary-50)',
-                    400: 'var(--color-primary-50)',
-                    500: 'var(--color-primary-50)',
-                    600: 'var(--color-primary-50)',
-                    700: 'var(--color-primary-50)',
-                    800: 'var(--color-primary-50)',
-                    900: 'var(--color-primary-50)'
+                    50: 'var(--primary-50)',
+                    100: 'var(--primary-50)',
+                    200: 'var(--primary-50)',
+                    300: 'var(--primary-50)',
+                    400: 'var(--primary-50)',
+                    500: 'var(--primary-50)',
+                    600: 'var(--primary-50)',
+                    700: 'var(--primary-50)',
+                    800: 'var(--primary-50)',
+                    900: 'var(--primary-50)'
                 },
                 'primary-dark': {
-                    50: 'var(--color-primary-dark-50)',
-                    100: 'var(--color-primary-dark-100)',
-                    200: 'var(--color-primary-dark-200)',
-                    300: 'var(--color-primary-dark-300)',
-                    400: 'var(--color-primary-dark-400)',
-                    500: 'var(--color-primary-dark-500)',
-                    600: 'var(--color-primary-dark-600)',
-                    700: 'var(--color-primary-dark-700)',
-                    800: 'var(--color-primary-dark-800)',
-                    900: 'var(--color-primary-dark-900)'
+                    50: 'var(--primary-dark-50)',
+                    100: 'var(--primary-dark-100)',
+                    200: 'var(--primary-dark-200)',
+                    300: 'var(--primary-dark-300)',
+                    400: 'var(--primary-dark-400)',
+                    500: 'var(--primary-dark-500)',
+                    600: 'var(--primary-dark-600)',
+                    700: 'var(--primary-dark-700)',
+                    800: 'var(--primary-dark-800)',
+                    900: 'var(--primary-dark-900)'
                 },
                 secondary: {
-                    50: 'var(--color-secondary-50)',
-                    100: 'var(--color-secondary-100)',
-                    200: 'var(--color-secondary-200)',
-                    300: 'var(--color-secondary-300)',
-                    400: 'var(--color-secondary-400)',
-                    500: 'var(--color-secondary-500)',
-                    600: 'var(--color-secondary-600)',
-                    700: 'var(--color-secondary-700)',
-                    800: 'var(--color-secondary-800)',
-                    900: 'var(--color-secondary-900)'
+                    50: 'var(--secondary-50)',
+                    100: 'var(--secondary-100)',
+                    200: 'var(--secondary-200)',
+                    300: 'var(--secondary-300)',
+                    400: 'var(--secondary-400)',
+                    500: 'var(--secondary-500)',
+                    600: 'var(--secondary-600)',
+                    700: 'var(--secondary-700)',
+                    800: 'var(--secondary-800)',
+                    900: 'var(--secondary-900)'
                 }
             }
         }
