@@ -4,38 +4,42 @@ export default {
     theme: {
         extend: {
             colors: {
-                'primary-50': '#E9C0FA',
-                'primary-100': '#E2ABF9',
-                'primary-200': '#DA96F7',
-                'primary-300': '#D381F5',
-                'primary-400': '#CB6CF4',
-                'primary-500': '#C457F2',
-                'primary-600': '#B731EF',
-                'primary-700': '#A612E5',
-                'primary-800': '#8B0FBF',
-                'primary-900': '#6F0C99',
-
-                'primary-dark-50': '#939393',
-                'primary-dark-100': '#797979',
-                'primary-dark-200': '#5E5E5E',
-                'primary-dark-300': '#434343',
-                'primary-dark-400': '#282828',
-                'primary-dark-500': '#0D0D0D',
-                'primary-dark-600': '#0B0B0B',
-                'primary-dark-700': '#0A0A0A',
-                'primary-dark-800': '#080808',
-                'primary-dark-900': '#070707',
-
-                'secondary-50': '#e3e1fc',
-                'secondary-100': '#c7c3f9',
-                'secondary-200': '#aba5f6',
-                'secondary-300': '#8f87f4',
-                'secondary-400': '#7369f1',
-                'secondary-500': '#574BEE',
-                'secondary-600': '#2516e5',
-                'secondary-700': '#1c10ac',
-                'secondary-800': '#120b72',
-                'secondary-900': '#090539'
+                primary: {
+                    50: 'var(--color-primary-50)',
+                    100: 'var(--color-primary-50)',
+                    200: 'var(--color-primary-50)',
+                    300: 'var(--color-primary-50)',
+                    400: 'var(--color-primary-50)',
+                    500: 'var(--color-primary-50)',
+                    600: 'var(--color-primary-50)',
+                    700: 'var(--color-primary-50)',
+                    800: 'var(--color-primary-50)',
+                    900: 'var(--color-primary-50)'
+                },
+                'primary-dark': {
+                    50: 'var(--color-primary-dark-50)',
+                    100: 'var(--color-primary-dark-100)',
+                    200: 'var(--color-primary-dark-200)',
+                    300: 'var(--color-primary-dark-300)',
+                    400: 'var(--color-primary-dark-400)',
+                    500: 'var(--color-primary-dark-500)',
+                    600: 'var(--color-primary-dark-600)',
+                    700: 'var(--color-primary-dark-700)',
+                    800: 'var(--color-primary-dark-800)',
+                    900: 'var(--color-primary-dark-900)'
+                },
+                secondary: {
+                    50: 'var(--color-secondary-50)',
+                    100: 'var(--color-secondary-100)',
+                    200: 'var(--color-secondary-200)',
+                    300: 'var(--color-secondary-300)',
+                    400: 'var(--color-secondary-400)',
+                    500: 'var(--color-secondary-500)',
+                    600: 'var(--color-secondary-600)',
+                    700: 'var(--color-secondary-700)',
+                    800: 'var(--color-secondary-800)',
+                    900: 'var(--color-secondary-900)'
+                }
             }
         }
     },
