@@ -1,30 +1,31 @@
+import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Layout, Page } from '@/templates'
 
-import ButtonPage from './pages/button.page'
-import DropdownPage from './pages/dropdown.page'
+import { Layout } from '@/templates'
+
+import { HomePage } from '@/pages'
+
+import { Error404 } from '@/errors'
+
+import '@/styles/index.css'
 
 const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
       {
-        path: '/button',
-        element: <ButtonPage />
-      },
-      {
-        path: '/dropdown',
-        element: <DropdownPage />
-      },
-      {
-        path: '*',
-        element: <Page>Select a page</Page>
+        path: '/',
+        element: <HomePage />
       }
     ]
+  },
+  {
+    path: '*',
+    element: <Error404 />
   }
 ])
 
-function App(): JSX.Element {
+function App(): React.ReactNode {
   return <RouterProvider router={router} />
 }
 

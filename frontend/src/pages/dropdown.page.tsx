@@ -19,7 +19,7 @@ const options = [
   'fury'
 ]
 
-const DropdownPage = (): JSX.Element => {
+export const DropdownPage = (): JSX.Element => {
   const isTransitioning = unstable_useViewTransitionState('/button')
 
   return (
@@ -31,5 +31,3 @@ const DropdownPage = (): JSX.Element => {
     </Page>
   )
 }
-
-export default DropdownPage
