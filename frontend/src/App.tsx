@@ -3,19 +3,29 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { Layout } from '@/templates'
 
-import { HomePage } from '@/pages'
+import { AuthPage, HomePage } from '@/pages'
 
 import { Error404 } from '@/errors'
 
 import '@/styles/index.css'
 
+import { UserProvider } from '@/contexts/UserContext'
+
 const router = createBrowserRouter([
   {
-    element: <Layout />,
+    element: (
+      <UserProvider>
+        <Layout />
+      </UserProvider>
+    ),
     children: [
       {
         path: '/',
         element: <HomePage />
+      },
+      {
+        path: '/auth',
+        element: <AuthPage />
       }
     ]
   },

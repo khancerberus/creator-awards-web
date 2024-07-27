@@ -1,24 +1,11 @@
-import { Link, Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+
+import { Navbar } from '@/components/Navbar'
 
 export const Layout = (): JSX.Element => {
-  // const location = useLocation()
   return (
-    <div>
-      <nav className="flex bg-red-700">
-        <ul className="flex gap-2">
-          <li>
-            <Link to="/button" unstable_viewTransition>
-              Button
-            </Link>
-          </li>
-          <li>
-            <Link to="/dropdown" unstable_viewTransition>
-              Dropdown
-            </Link>
-          </li>
-        </ul>
-      </nav>
-
+    <div className="">
+      <Navbar />
       <Outlet />
     </div>
   )
