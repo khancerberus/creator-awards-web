@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 :root {
+  --neutral-900: #2D2033;
   --primary-50: #E9C0FA;
   --primary-100: #E2ABF9;
   --primary-200: #DA96F7;
@@ -35,19 +36,67 @@
   --secondary-700: #1c10ac;
   --secondary-800: #120b72;
   --secondary-900: #090539;
+  --accent-1-50: #FAEAB8;
+  --accent-1-100: #F9E3A0;
+  --accent-1-200: #F7DB88;
+  --accent-1-300: #F5D470;
+  --accent-1-400: #F4CD59;
+  --accent-1-500: #F2C641;
+  --accent-1-600: #F0BB1D;
+  --accent-1-700: #D8A60F;
+  --accent-1-800: #B48A0C;
+  --accent-1-900: #906E0A;
+  --accent-2-50: #FADDB8;
+  --accent-2-100: #F9D1A0;
+  --accent-2-200: #F7C688;
+  --accent-2-300: #F5BA70;
+  --accent-2-400: #F4AF59;
+  --accent-2-500: #F2A341;
+  --accent-2-600: #F0921D;
+  --accent-2-700: #D87E0F;
+  --accent-2-800: #B4690C;
+  --accent-2-900: #90540A;
 
   font-family: 'Montserrat', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: normal;
 
   color-scheme: light dark;
-  /* color: white; */
-  background-color: var(--primary-dark-500);
+  color: white;
+  background-color: var(--primary-dark-900);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 89.8px;
+}
+
+h2 {
+  font-size: 67.3px;
+}
+
+h3 {
+  font-size: 50.5px;
+}
+
+h4 {
+  font-size: 37.9px;
+}
+
+h5 {
+  font-size: 28.5px;
+}
+
+h6 {
+  font-size: 21.3px;
+}
+
+a {
+  color: var(--neutral-900);
 }
 
 .options-transition-enter {
