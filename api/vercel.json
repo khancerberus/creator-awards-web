@@ -1,9 +1,3 @@
 {
-    "outputDirectory": "dist",
-    "routes": [
-        {
-        "src": "/(.*)",
-        "dest": "/"
-        }
-    ]
+    "outputDirectory": "dist"
 }
