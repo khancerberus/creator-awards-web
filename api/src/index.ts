@@ -3,6 +3,7 @@ import cors from 'cors'
 import { expressjwt } from 'express-jwt'
 import jwt from 'jsonwebtoken'
 
+const PORT = process.env.PORT ?? 3000
 const TWITCH_AUTH_URL = 'https://id.twitch.tv/oauth2/token'
 const CLIENT_ID = process.env.CLIENT_ID ?? ''
 const CLIENT_SECRET = process.env.CLIENT_SECRET ?? ''
@@ -85,6 +86,6 @@ app.get('/protected', (_req, res) => {
   })
 })
 
-app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000')
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`)
 })
