@@ -21,7 +21,7 @@ app.use(
     secret: 'secret',
     algorithms: ['HS256'],
     credentialsRequired: true
-  }).unless({ path: ["/auth"] })
+  }).unless({ path: ["/auth", "/"] })
 )
 
 app.use(((err: any, _req: any, res: any, next: any) => {
@@ -33,6 +33,10 @@ app.use(((err: any, _req: any, res: any, next: any) => {
 
   next(err)
 }) as RequestHandler)
+
+app.get('/', (_req, res) => {
+  res.send('Hello World')
+})
 
 app.post('/auth', async (req, res) => {
   const { code } = req.body
