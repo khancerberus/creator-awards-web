@@ -1,8 +1,9 @@
 import { useUser } from '@/hooks/useUser'
 
 const CLIENT_ID = import.meta.env.VITE_CLIENT_ID
+const REDIRECT_HOST = import.meta.env.VITE_REDIRECT_HOST
 
-const twitchAuthUrl = `https://id.twitch.tv/oauth2/authorize?response_type=code&client_id=${CLIENT_ID}&redirect_uri=http://localhost:5173/auth&scope=user:read:email`
+const twitchAuthUrl = `https://id.twitch.tv/oauth2/authorize?response_type=code&client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_HOST}/auth&scope=user:read:email`
 
 export const TwitchButton = (): React.ReactNode => {
   const { user } = useUser()
