@@ -3,6 +3,8 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 
 import { useUser } from '@/hooks/useUser'
 
+const API_HOST = import.meta.env.VITE_API_HOST
+
 export const AuthPage = (): React.ReactNode => {
   const [searchParams, setSearchParams] = useSearchParams()
   const navigate = useNavigate()
@@ -12,7 +14,7 @@ export const AuthPage = (): React.ReactNode => {
     const code = searchParams.get('code')
     setSearchParams()
 
-    fetch('http://localhost:3000/auth', {
+    fetch(`${API_HOST}/auth`, {
       method: 'POST',
       body: JSON.stringify({
         code: code
