@@ -2,6 +2,7 @@ import express, { ErrorRequestHandler, type RequestHandler } from 'express'
 import cors from 'cors'
 import { expressjwt } from 'express-jwt'
 import jwt from 'jsonwebtoken'
+import morgan from 'morgan'
 
 const PORT = process.env.PORT ?? 3000
 const TWITCH_AUTH_URL = 'https://id.twitch.tv/oauth2/token'
@@ -18,6 +19,7 @@ app.use(express.json())
 app.use(cors({
   origin: '*',
 }))
+app.use(morgan('dev'))
 
 app.use(
   expressjwt({
