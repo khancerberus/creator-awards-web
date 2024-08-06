@@ -10,6 +10,9 @@ const CLIENT_SECRET = process.env.CLIENT_SECRET ?? ''
 const GRANT_TYPE = 'authorization_code'
 const REDIRECT_URI = 'http://localhost:3000'
 
+console.log('CLIENT_ID', CLIENT_ID)
+console.log('CLIENT_SECRET', CLIENT_SECRET)
+
 const app = express()
 app.use(express.json())
 app.use(cors({
