@@ -3,6 +3,7 @@ import cors from 'cors'
 import { expressjwt } from 'express-jwt'
 import jwt from 'jsonwebtoken'
 import morgan from 'morgan'
+import 'dotenv/config'
 
 const PORT = process.env.PORT ?? 3000
 const TWITCH_AUTH_URL = 'https://id.twitch.tv/oauth2/token'
