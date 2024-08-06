@@ -1,4 +1,4 @@
-import express, { type RequestHandler } from 'express'
+import express, { ErrorRequestHandler, type RequestHandler } from 'express'
 import cors from 'cors'
 import { expressjwt } from 'express-jwt'
 import jwt from 'jsonwebtoken'
@@ -48,6 +48,8 @@ app.post('/auth', async (req, res) => {
 
   const authUrl = `${TWITCH_AUTH_URL}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&code=${code}&grant_type=${GRANT_TYPE}&redirect_uri=${REDIRECT_URI}`
 
+  console.log('consultando...', authUrl)
+
   const response = await fetch(authUrl, {
     method: 'POST',
     headers: {
@@ -89,6 +91,11 @@ app.get('/protected', (_req, res) => {
     profileImageUrl: 'https://via.placeholder.com/150'
   })
 })
+
+app.use(((error, _req, res, _next) => {
+  console.error(error)
+  res.status(500).json({ message: 'Internal server error' })
+}) as ErrorRequestHandler)
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`)
