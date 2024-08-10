@@ -1,4 +1,5 @@
 import { useUser } from '@/hooks/useUser'
+import twitchIcon from '@/assets/icons/twitch-icon-white.png'
 
 const CLIENT_ID = import.meta.env.VITE_CLIENT_ID
 const REDIRECT_HOST = import.meta.env.VITE_REDIRECT_HOST
@@ -19,9 +20,10 @@ export const TwitchButton = (): React.ReactNode => {
       ) : (
         <button
           onClick={handleClick}
-          className="flex min-w-28 gap-2 rounded-md bg-[#9147ff] px-4 py-2 transition-all duration-200 hover:bg-[#412072]"
+          className="flex gap-[10px] rounded-md px-[30px] py-[10px] transition-all duration-200 border twitch-button"
         >
-          <span>Login</span>
+          <img src={twitchIcon} alt="Twitch icon" width={20} />
+          <p>Iniciar sesión</p>
         </button>
       )}
     </>

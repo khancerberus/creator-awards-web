@@ -63,7 +63,7 @@
 
   color-scheme: light dark;
   color: white;
-  background-color: var(--primary-dark-900);
+  background-color: #16161D;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -93,10 +93,6 @@ h5 {
 
 h6 {
   font-size: 21.3px;
-}
-
-a {
-  color: var(--neutral-900);
 }
 
 .options-transition-enter {
@@ -170,4 +166,22 @@ a {
 
 .button-move {
   view-transition-name: button-move;
+}
+
+.spyro-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 50%;
+  background: fixed url('images/logo_final_ca.png') no-repeat;
+  background-size: 1577px 1304px;
+  background-position: 18rem;
+  background-blend-mode: screen;
+}
+
+.twitch-button:hover {
+  filter: drop-shadow(0 0 1rem white);
 }
