@@ -23,7 +23,7 @@ export const TwitchButton = (): React.ReactNode => {
           className="flex gap-[10px] rounded-md px-[30px] py-[10px] transition-all duration-200 border twitch-button"
         >
           <img src={twitchIcon} alt="Twitch icon" width={20} />
-          <p>Iniciar sesión</p>
+          <p className="text-nowrap">Iniciar sesión</p>
         </button>
       )}
     </>
