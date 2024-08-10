@@ -6,7 +6,7 @@ import { Logo } from './Logo'
 
 export const Navbar = (): React.ReactNode => {
   return (
-    <nav className="flex h-[130px] items-center justify-between px-96 z-10">
+    <nav className="flex h-[130px] items-center justify-evenly z-10">
       {/* DONT USE HOME LINK, USE LOGO OR PAGE TITLE WITH LINK TO THE ROOT */}
       <Logo />
 
