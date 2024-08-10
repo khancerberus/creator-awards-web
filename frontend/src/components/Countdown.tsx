@@ -1,8 +1,4 @@
-import { useState } from 'react';
-
-
-
-
+import { useState } from 'react'
 
 interface CellProps {
   label: string
@@ -12,7 +8,7 @@ interface CellProps {
 const eventDate = new Date('2025-01-15').getTime()
 
 const Cell = ({ label, value }: CellProps): React.ReactNode => (
-  <div className="border-[#5A3F66] flex w-48 flex-col items-center gap-[10px] rounded-lg border bg-gradient-to-b from-[#5A3F66] to-transparent p-[5px]">
+  <div className="flex w-48 flex-col items-center gap-[10px] rounded-lg border border-[#5A3F66] bg-gradient-to-b from-[#5A3F66] to-transparent p-[5px]">
     <h1 className="font-bold">{value}</h1>
     <h5 className="font-medium">{label}</h5>
   </div>
