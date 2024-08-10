@@ -176,7 +176,7 @@ h6 {
   height: 100vh;
   z-index: -1;
   opacity: 50%;
-  background: fixed url('images/logo_final_ca.png') no-repeat;
+  background: fixed url('/images/logo_final_ca.png') no-repeat;
   background-size: 1577px 1304px;
   background-position: 18rem;
   background-blend-mode: screen;
