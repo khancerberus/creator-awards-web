@@ -12,9 +12,6 @@ const CLIENT_SECRET = process.env.CLIENT_SECRET ?? ''
 const GRANT_TYPE = 'authorization_code'
 const REDIRECT_URI = 'http://localhost:3000'
 
-console.log('CLIENT_ID', CLIENT_ID)
-console.log('CLIENT_SECRET', CLIENT_SECRET)
-
 const app = express()
 app.use(express.json())
 app.use(cors({
@@ -54,8 +51,6 @@ app.post('/auth', async (req, res) => {
 
   const authUrl = `${TWITCH_AUTH_URL}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&code=${code}&grant_type=${GRANT_TYPE}&redirect_uri=${REDIRECT_URI}`
 
-  console.log('consultando...', authUrl)
-
   const response = await fetch(authUrl, {
     method: 'POST',
     headers: {
@@ -74,8 +69,6 @@ app.post('/auth', async (req, res) => {
     }
   })
     .then((res) => res.json())
-
-    console.log(JSON.stringify(response2))
 
   const authToken = jwt.sign({
     twitchId: response2.data[0].id
