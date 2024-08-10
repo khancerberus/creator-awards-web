@@ -1,7 +1,6 @@
 import { Page } from '@/templates'
 
 import { Countdown } from '@/components/Countdown'
-import { TwitchButton } from '@/components'
 
 export function HomePage(): React.ReactNode {
   return (
@@ -16,8 +15,14 @@ export function HomePage(): React.ReactNode {
 
       <section className="flex flex-col items-center gap-2">
         <h5 className="font-bold">Creator Awards 2024</h5>
-        <h6 className="font-medium">Consigue tu ticket aquí</h6>
-        <TwitchButton />
+        <div className="flex gap-2">
+          <button className="border p-2 rounded-md hover:bg-white hover:text-[#16161D]">
+            Consigue tu ticket
+          </button>
+          <button className="border p-2 rounded-md hover:bg-white hover:text-[#16161D]">
+            Vota aquí
+          </button>
+        </div>
       </section>
     </Page>
   )
