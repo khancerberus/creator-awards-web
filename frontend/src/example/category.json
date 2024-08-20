@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "El mas funado",
+        "description": "Se elige al mas funado del año",
+        "resourceType": "image",
+        "voteLimit": 1
+    },
+    {
+      "id": 2,
+      "title": "Clip del año",
+      "description": "Se elige el mejor clip del año",
+      "resourceType": "video",
+      "voteLimit": 2
+    }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "title": "DoomT_Creator",
+    "categoryId": 1,
+    "source": "/images/nominated/doom.png",
+    "bgSource": "/images/nominated/doom-bg.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Enji3",
+    "categoryId": 1,
+    "source": "/images/nominated/enji.png",
+    "bgSource": "/images/nominated/doom-bg.jpg"
+  },
+  {
+    "id": 3,
+    "title": "FurySoo",
+    "categoryId": 1,
+    "source": "/images/nominated/fury.png",
+    "bgSource": "/images/nominated/doom-bg.jpg"
+  },
+  {
+    "id": 4,
+    "title": "SweetChikita",
+    "categoryId": 1,
+    "source": "/images/nominated/sweet.png",
+    "bgSource": "/images/nominated/doom-bg.jpg"
+  },
+  {
+    "id": 5,
+    "title": "BoostianCreator",
+    "categoryId": 1,
+    "source": "/images/nominated/boostian.png",
+    "bgSource": "https://steamuserimages-a.akamaihd.net/ugc/857227448331781425/F67372EE76EA9C41ECCF778A28BFEE4E8A7239D2/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+  },
+  {
+    "id": 6,
+    "title": "Gotye - Somebody That I Used To Know",
+    "categoryId": 2,
+    "source": "8UVNT4wvIGY"
+  },
+  {
+    "id": 7,
+    "title": "Ben E. King — Stand By Me",
+    "categoryId": 2,
+    "source": "einn_UJgGGM"
+  },
+  {
+    "id": 8,
+    "title": "The Outfield - Your Love",
+    "categoryId": 2,
+    "source": "4N1iwQxiHrs"
+  },
+  {
+    "id": 9,
+    "title": "a-ha - Take On Me",
+    "categoryId": 2,
+    "source": "djV11Xbc914"
+  }
+]

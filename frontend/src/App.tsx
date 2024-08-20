@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { Layout } from '@/templates'
 
-import { AuthPage, HomePage } from '@/pages'
+import { AuthPage, HomePage, Vote, VoteSystem } from '@/pages'
 
 import { Error404 } from '@/errors'
 
@@ -26,6 +26,14 @@ const router = createBrowserRouter([
       {
         path: '/auth',
         element: <AuthPage />
+      },
+      {
+        path: '/vote',
+        element: <Vote />
+      },
+      {
+        path: '/vote/proccess/:id',
+        element: <VoteSystem />
       }
     ]
   },

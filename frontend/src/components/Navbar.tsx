@@ -1,16 +1,30 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { TwitchButton } from './TwitchButton'
 import { Logo } from './Logo'
+import { TwitchButton } from './TwitchButton'
+import './Navbar.css'
 
 export const Navbar = (): React.ReactNode => {
   return (
-    <nav className="flex h-[130px] items-center justify-evenly z-10">
+    <nav className="relative flex h-[130px] items-center justify-evenly z-50">
+      <input type="checkbox" id="nav-check" />
       {/* DONT USE HOME LINK, USE LOGO OR PAGE TITLE WITH LINK TO THE ROOT */}
-      <Logo />
+      <header>
+        <Link to="/" unstable_viewTransition>
+          <Logo />
+        </Link>
+      </header>
 
-      <ul className="flex gap-4 font-medium items-center">
+      <div className="nav-btn">
+        <label htmlFor="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <ul className="nav-links flex items-center gap-4 font-medium">
         <li>
           <Link to="/button" unstable_viewTransition>
             NOTICIAS
