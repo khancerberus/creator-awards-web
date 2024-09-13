@@ -38,7 +38,6 @@ app.use(((err: any, _req: any, res: any, next: any) => {
 }) as RequestHandler)
 
 app.get('/', (_req, res) => {
-  // test jira here
   res.send('Hello World')
 })
 
